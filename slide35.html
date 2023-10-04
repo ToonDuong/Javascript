@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+                <title>Tính Tổng Bằng JavaScript</title>
+            <script>
+                function tinhTong() {
+                    var so1 = parseFloat(document.getElementById("so1").value);
+                    var so2 = parseFloat(document.getElementById("so2").value);
+                    var tong = so1 + so2;
+            document.getElementById("ketqua").innerHTML = "Tổng a và b là " + tong; // Thêm khoảng trắng sau "là"
+        }
+    </script>
+        </head>
+            <body>
+         <label for="so1">Nhập số a </label>
+                <input type="text" id="so1">
+                 <br>
+                     <label for="so2">Nhập số b </label>
+                        <input type="text" id="so2">
+    <br>
+                 <p id="ketqua"></p>
+                <button onclick="tinhTong()">Tính Tổng</button>
+        </body>
+</html>
