@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            document.addEventListener('DOMContentLoaded' , function() {
+                document.querySelector('#new-task').onsubmit = function() {
+                    
+                    const li = document.createElement('li');
+                    li.innerHTML = document.querySelector('#task').value;
+                    
+                    document.querySelector('#tasks').append(li);
+
+                    document.querySelector('#task').value = '';
+
+                    return false;
+
+                    
+                };
+            });
+
+        </script>
+        <title>Info</title>
+
+    </head>
+    <body>
+        <h1>Info</h1>
+        <ul id="tasks"></ul>
+        <form id="new-task">
+            <input type="text" id="task" autofocus placeholder="New Task">
+            <input type="submit">
+
+        </form>
+    </body>
+</html>
